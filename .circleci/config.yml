@@ -2,26 +2,23 @@ version: 2
 jobs:
   validate:
     docker:
-      - image: hashicorp/packer:1.1.1
-    working_directory: ~/packer
+      - image: centos
     steps:
       - checkout
-      - run:
-          name: Validate base
-          command: packer validate ./base/base.json
+      - persist_to_workspace:
+          root: ~/project
+          paths: ['.']
 
   build-base:
     docker:
-      - image: hashicorp/packer:1.1.1
-    working_directory: ~/packer
+      - image: centos
     steps:
       - checkout
       - attach_workspace:
-          at: ~/packer
+          at: ~/project
       - run:
           name: Build base
           command: |
-            packer build ./base/base.json
             sh ./scripts/build.sh 
           no_output_timeout: 30m
       - persist_to_workspace:

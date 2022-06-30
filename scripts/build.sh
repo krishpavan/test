@@ -21,3 +21,4 @@ unzip packer*.zip
 chmod +x packer
 mv packer /usr/local/bin/
 
+packer build ./centos/centos-7.9-x86_64.json

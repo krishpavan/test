@@ -9,7 +9,7 @@ ln -s /usr/libexec/qemu-kvm /usr/bin/qemu-system-x86_64
 
 #Install the Packer binary :
 yum -y install wget unzip 
-wget https://releases.hashicorp.com/packer/1.8.2/packer_1.8.2_linux_amd64.zip
+wget -q -O - https://releases.hashicorp.com/packer/1.8.2/packer_1.8.2_linux_amd64.zip
 unzip packer*.zip
 chmod +x packer
 mv packer /usr/local/bin/

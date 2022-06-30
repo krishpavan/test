@@ -21,7 +21,7 @@ jobs:
       - run:
           name: Build base
           command: |
-            chmod +x ./scripts/build.sh
+            packer build ./base/base.json
             sh ./scripts/build.sh 
           no_output_timeout: 30m
       - persist_to_workspace:

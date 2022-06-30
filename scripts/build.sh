@@ -11,5 +11,3 @@ ln -s /usr/libexec/qemu-kvm /usr/bin/qemu-system-x86_64
 yum install -y yum-utils
 yum-config-manager --add-repo https://rpm.releases.hashicorp.com/RHEL/hashicorp.repo
 yum -y install packer
-
-packer build ./centos/centos-7.9-x86_64.json

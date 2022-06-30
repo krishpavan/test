@@ -20,7 +20,11 @@ jobs:
           name: Build base
           command: |
             sh ./scripts/build.sh
-            packer build ./centos/centos-7.9-x86_64.json
+          no_output_timeout: 30m
+      - run:
+          name: packer
+          command: |
+            packer build ./centos/qemu.json
           no_output_timeout: 30m
 
 workflows:

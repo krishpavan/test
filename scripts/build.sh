@@ -1,6 +1,6 @@
 #!/bin/bash
 set -e
-
+#sd
 # load our helper functions
 source scripts/common.sh
 

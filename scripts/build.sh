@@ -2,6 +2,9 @@
 ##krishset -e
 #sd
 # load our helper functions
+packer build base/base.json
+
+exit 0
 source scripts/common.sh
 
 # check that the tools we require are present

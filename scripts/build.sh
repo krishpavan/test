@@ -1,6 +1,5 @@
-#!/bin/bash
+#!/bin/sh
 ## virsh install
-set -eux -o pipefail
 yum -y install epel-release
 yum -y upgrade
 yum -y group install "Virtualization Host"

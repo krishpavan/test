@@ -1,5 +1,5 @@
 #!/bin/bash
-set -e
+##krishset -e
 #sd
 # load our helper functions
 source scripts/common.sh

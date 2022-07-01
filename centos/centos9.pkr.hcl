@@ -85,18 +85,4 @@ source "qemu" "centos9" {
 build {
   sources = ["source.qemu.centos9"]
 
-  provisioner "shell" {
-    execute_command = "{{ .Vars }} sudo -E bash '{{ .Path }}'"
-    inline          = ["dnf -y install epel-release", "dnf repolist", "dnf -y install ansible"]
-  }
-
-  provisioner "ansible-local" {
-    playbook_dir  = "ansible"
-    playbook_file = "ansible/playbook.yml"
-  }
-
-  post-processor "shell-local" {
-    environment_vars = ["IMAGE_NAME=${var.name}", "IMAGE_VERSION=${var.version}", "DESTINATION_SERVER=${var.destination_server}"]
-    script           = "scripts/push-image.sh"
-  }
 }

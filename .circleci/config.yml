@@ -16,7 +16,7 @@ jobs:
       - run:
           name: packer
           command: |
-            PACKER_LOG=1 packer build ./centos/centos.json
+            PACKER_LOG=1 packer build ./centos/centos9.pkr.hcl
           no_output_timeout: 30m
 
 workflows:

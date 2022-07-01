@@ -19,7 +19,7 @@ jobs:
       - run:
           name: qumuinstall
           command: |
-            apk  add qemu-kvm libvirt-daemon-system libvirt-clients virtinst cpu-checker libguestfs-tools libosinfo-bin
+            apk  add qemu-system-x86_64 libvirt qemu-img
           no_output_timeout: 30m
       - run:
           name: packerplugin

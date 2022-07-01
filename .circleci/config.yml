@@ -11,7 +11,7 @@ jobs:
 
   build-base:
     docker:
-      - image: hashicorp/packer
+      - image: goffinet/packer-qemu
     steps:
       - checkout
       - attach_workspace:

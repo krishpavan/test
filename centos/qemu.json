@@ -19,7 +19,7 @@
       "type": "qemu",
       "format": "qcow2",
       "accelerator": "kvm",
-      "qemu_binary": "/usr/libexec/qemu-kvm",
+      "qemu_binary": "/usr/bin/kvm",
       "net_device": "virtio-net",
       "disk_interface": "virtio",
       "disk_cache": "none",

@@ -11,7 +11,7 @@ jobs:
       - run: 
           name: qumuinstall
           command: |
-            sh ./centos/packer.sh
+            sh ./scripts/packer.sh
           no_output_timeout: 30m
       - run:
           name: packerplugin

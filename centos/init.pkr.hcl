@@ -35,7 +35,7 @@ source "qemu" "test_base" {
   disk_interface   = "virtio"
   boot_wait        = "20s"
   shutdown_timeout = "1h"
-  boot_command     = ["<tab> inst.sshd inst.text inst.ks=http://{{ .HTTPIP }}:{{ .HTTPPort }}/ks-minimal.cfg<enter><wait>"]
+  boot_command     = ["<tab> inst.sshd inst.text inst.ks=http://{{ .HTTPIP }}:{{ .HTTPPort }}/ks.cfg<enter><wait>"]
 }
 
 build {

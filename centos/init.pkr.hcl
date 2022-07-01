@@ -25,7 +25,7 @@ source "qemu" "test_base" {
   shutdown_command = "echo 'packer' | sudo -S shutdown -P now"
   disk_size        = "30G"
   format           = "qcow2"
-  accelerator      = "kvm"
+  #accelerator      = "kvm"
   http_directory   = "./centos/http"
   ssh_username     = "build"
   ssh_password     = "build"

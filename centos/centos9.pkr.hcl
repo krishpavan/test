@@ -59,7 +59,7 @@ variable "version" {
 }
 
 source "qemu" "centos9" {
-  accelerator      = "kvm"
+  #accelerator      = "kvm"
   boot_command     = ["<tab><bs><bs><bs><bs><bs><bs><bs><bs><bs><bs><bs><bs><bs><bs><bs><bs><bs><bs><bs> inst.text inst.ks=http://{{ .HTTPIP }}:{{ .HTTPPort }}/http/${var.config_file}<enter><wait>"]
   boot_wait        = "40s"
   disk_cache       = "none"

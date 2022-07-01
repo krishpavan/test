@@ -26,7 +26,7 @@ source "qemu" "test_base" {
   disk_size        = "30G"
   format           = "qcow2"
   accelerator      = "kvm"
-  http_directory   = "http"
+  http_directory   = "./centos/http"
   ssh_username     = "build"
   ssh_password     = "build"
   ssh_timeout      = "20m"

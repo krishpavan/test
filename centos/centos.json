@@ -11,8 +11,6 @@
         "iso/CentOS-7-x86_64-Minimal-{{ user `version` }}.iso",
         "http://mirror.de.leaseweb.net/centos/7/isos/x86_64/CentOS-7-x86_64-Minimal-{{ user `version` }}.iso"
       ],
-      "iso_checksum_url": "http://mirror.de.leaseweb.net/centos/7/isos/x86_64/sha256sum.txt",
-      "iso_checksum_type": "sha256",
       "iso_target_path": "iso",
       "output_directory": "output-centos",
       "ssh_username": "centos",

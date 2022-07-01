@@ -1,17 +1,29 @@
-version: 2.1
-orbs:
-  packer: salaxander/packer@0.1
+version: 2
 jobs:
-  packer-example:
-    executor: packer/default
+  validate:
+    docker:
+      - image: centos:centos7
     steps:
       - checkout
-      - build:
-          template: packer.json
-          args: '-var aws_region=us-east-1'
-workflows:
-  version: 2
-  packer:
-    jobs:
-      - packer-example
+      - persist_to_workspace:
+          root: ~/project
+          paths: ['.']
+
+  build-base:
+    docker:
+      - image: centos:centos7
+    steps:
+      - checkout
+      - attach_workspace:
+          at: ~/project
+      - run:
+          name: Build base
+          command: |
+            sh ./scripts/build.sh
+          no_output_timeout: 30m
+      - run:
+          name: packer
+          command: |
+            packer build ./centos/qemu.json
+          no_output_timeout: 30m
 

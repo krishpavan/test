@@ -19,7 +19,7 @@ jobs:
       - run:
           name: packerplugin
           command: |
-            packer init ./centos/init.json 
+            packer init ./centos/init.hcl
           no_output_timeout: 30m
       - run:
           name: packer

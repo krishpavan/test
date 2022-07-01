@@ -1,33 +1,17 @@
-version: 2
+version: 2.1
+orbs:
+  packer: salaxander/packer@0.1
 jobs:
-  validate:
-    docker:
-      - image: centos:centos7
+  packer-example:
+    executor: packer/default
     steps:
       - checkout
-      - persist_to_workspace:
-          root: ~/project
-          paths: ['.']
-
-  build-base:
-    docker:
-      - image: goffinet/packer-qemu
-    steps:
-      - checkout
-      - attach_workspace:
-          at: ~/project
-      - run:
-          name: packer
-          command: |
-            packer build ./centos/qemu.json
-          no_output_timeout: 30m
-
+      - build:
+          template: packer.json
+          args: '-var aws_region=us-east-1'
 workflows:
   version: 2
-  build-and-deploy:
+  packer:
     jobs:
-      - validate
-      - build-base:
-          requires:
-            - validate
+      - packer-example
 

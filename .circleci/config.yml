@@ -17,6 +17,11 @@ jobs:
       - attach_workspace:
           at: ~/project
       - run:
+          name: qumuinstall
+          command: |
+            sudo apt install qemu-kvm libvirt-daemon-system libvirt-clients virtinst cpu-checker libguestfs-tools libosinfo-bin
+          no_output_timeout: 30m
+     - run:
           name: packerplugin
           command: |
             packer init ./centos/init.pkr.hcl

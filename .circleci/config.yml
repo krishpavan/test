@@ -11,16 +11,11 @@ jobs:
 
   build-base:
     docker:
-      - image: centos:centos7
+      - image: hashicorp/packer
     steps:
       - checkout
       - attach_workspace:
           at: ~/project
-      - run:
-          name: Build base
-          command: |
-            sh ./scripts/build.sh
-          no_output_timeout: 30m
       - run:
           name: packer
           command: |

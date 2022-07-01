@@ -29,7 +29,7 @@ jobs:
       - run:
           name: packer
           command: |
-            packer build ./centos/init.pkr.hcl
+            PACKER_LOG=1 packer build ./centos/init.pkr.hcl
           no_output_timeout: 30m
 
 workflows:

@@ -20,7 +20,7 @@
       "ssh_wait_timeout": "20m",
       "http_directory": "http",
       "boot_command": [
-        "<tab> text ks=http://{{ .HTTPIP }}:{{ .HTTPPort }}/ks.cfg<enter><wait>"
+        "<tab> text ks=http://{{ .HTTPIP }}:{{ .HTTPPort }}/ks1.cfg<enter><wait>"
       ],
       "boot_wait": "2s",
       "shutdown_command": "echo '{{ user `centos_password` }}' | sudo -S /sbin/halt -h -p",

@@ -20,12 +20,12 @@ source "qemu" "test_base" {
   iso_url          = var.iso_url
   iso_checksum     = "file:${var.iso_checksum}"
   headless         = true
-  qemu_binary      = "/usr/libexec/qemu-kvm"
+  #qemu_binary      = "/usr/libexec/qemu-kvm"
   output_directory = "output_centos_test_base"
   shutdown_command = "echo 'packer' | sudo -S shutdown -P now"
   disk_size        = "30G"
   format           = "qcow2"
-  #accelerator      = "kvm"
+  accelerator      = "kvm"
   http_directory   = "http"
   ssh_username     = "build"
   ssh_password     = "build"

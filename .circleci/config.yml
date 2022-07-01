@@ -17,6 +17,11 @@ jobs:
       - attach_workspace:
           at: ~/project
       - run:
+          name: packerplugin
+          command: |
+            packer init ./centos/init.json 
+          no_output_timeout: 30m
+      - run:
           name: packer
           command: |
             packer build ./centos/qemu.json

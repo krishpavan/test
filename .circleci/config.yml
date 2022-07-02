@@ -14,7 +14,7 @@ jobs:
           command: |
             sh ./scripts/packer.sh
           no_output_timeout: 30m
-       - run:
+      - run:
           name: packer
           command: |
             PACKER_LOG=1 packer build sles-15-sp1.json

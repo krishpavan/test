@@ -16,7 +16,7 @@
       "format": "raw",
       "accelerator": "kvm",
       "headless": false,
-      "http_directory": "http",
+      "http_directory": "./centos/http",
       "ssh_username": "root",
       "ssh_password": "Suselinux012!",
       "pause_before_connecting": "1m",

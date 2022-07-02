@@ -14,15 +14,10 @@ jobs:
           command: |
             sh ./scripts/packer.sh
           no_output_timeout: 30m
-      - run:
+       - run:
           name: packer
           command: |
-            PACKER_LOG=1 packer init ./centos/init.pkr.hcl
-          no_output_timeout: 30m
-      - run:
-          name: packer
-          command: |
-            PACKER_LOG=1 packer build ./centos/init.pkr.hcl
+            PACKER_LOG=1 packer build sles-15-sp1.json
           no_output_timeout: 30m
 
 workflows:

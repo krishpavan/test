@@ -9,10 +9,13 @@ jobs:
           root: ~/project
           paths: ['.']
       - run: 
-          name: qumuinstall
+          name: packerinstall
           command: |
             sh ./scripts/packer.sh
           no_output_timeout: 30m
+      - run: 
+          name: install qemu
+          command: sudo egrep '(vmx|svm)' /proc/cpuinfo && sudo apt update && sudo apt-get install -y qemu-kvm qemu libvirt-bin
       - run:
           name: packer
           command: |

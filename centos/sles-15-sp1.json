@@ -14,7 +14,7 @@
       "disk_size": "10G",
       "disk_compression": "true",
       "format": "raw",
-      "accelerator": "kvm",
+      #"accelerator": "kvm",
       "headless": false,
       "http_directory": "./centos/http",
       "ssh_username": "root",

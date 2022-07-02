@@ -1,4 +1,4 @@
-sudo apt-get install -y qemu-system-x86_64
+sudo apt-get install -y qemu-system-x86
 sudo apt-get install -y qemu-kvm 
 sudo apt-get install -y qemu 
 sudo apt-get install -y libvirt-bin

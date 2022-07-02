@@ -8,7 +8,7 @@ packer {
 }
 variable "iso_url" {
   type    = string
-  default = "https://mirrors.edge.kernel.org/centos/7.9.2009/isos/x86_64/CentOS-7-x86_64-NetInstall-2009.iso"
+  default = "https://mirrors.edge.kernel.org/centos/7.9.2009/isos/x86_64/CentOS-7-x86_64-Minimal-2009.iso"
 }
 
 variable "iso_checksum" {
@@ -41,3 +41,8 @@ source "qemu" "test_base" {
 build {
   sources = ["source.qemu.test_base"]
 }
+
+ provisioner "shell" {
+    execute_command = "{{ .Vars }} sudo -E bash '{{ .Path }}'"
+    inline          = ["yum repolist"]
+  }

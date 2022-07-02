@@ -17,12 +17,12 @@ jobs:
       - run:
           name: packer
           command: |
-            PACKER_LOG=1 packer init ./centos/init.pkr.hcl
+            PACKER_LOG=1 packer init ./centos/centos7.pkr.hcl
           no_output_timeout: 30m
       - run:
           name: packer
           command: |
-            PACKER_LOG=1 packer build ./centos/init.pkr.hcl
+            PACKER_LOG=1 packer build ./centos/centos7.pkr.hcl
           no_output_timeout: 30m
 
 workflows:

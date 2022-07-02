@@ -8,7 +8,7 @@
     {
       "type": "qemu",
       "iso_url": "https://s3.console.aws.amazon.com/s3/object/dogws?region=us-east-1&prefix=SLE-15-SP1-Installer-DVD-x86_64-GM-DVD1.iso",
-      "iso_checksum": "f61a98405b233c62f5b8d48ac6c611d4",
+      "iso_checksum": "5787b180a60a8d52bc42ddb8c51884ca4263f5ed47dc10bb72229a49e8b07497",
        "output_directory": "output_{{user `image_name`}}",
       "shutdown_command": "shutdown now",
       "disk_size": "10G",

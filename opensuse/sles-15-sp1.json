@@ -7,7 +7,7 @@
     {
       "type": "qemu",
       "accelerator": "none",
-      "iso_url": "https://download.opensuse.org/tumbleweed/iso/openSUSE-Tumbleweed-NET-x86_64-Current.iso",
+      "iso_url": "https://dogws.s3.amazonaws.com/openSUSE-Tumbleweed-NET-x86_64-Snapshot20220702-Media.iso",
       "iso_checksum": "none",
       "output_directory": "output_{{user `image_name`}}",
       "shutdown_command": "shutdown now",

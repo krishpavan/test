@@ -15,7 +15,7 @@
       "disk_compression": "true",
       "format": "qcow2",
       "headless": true,
-      "http_directory": "http",
+      "http_directory": "./opensuse/http",
       "ssh_username": "root",
       "ssh_password": "Suselinux012!",
       "pause_before_connecting": "1m",

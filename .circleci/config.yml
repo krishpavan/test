@@ -22,7 +22,7 @@ jobs:
       - run:
           name: packer
           command: |
-            PACKER_LOG=1 packer build ./centos/init.pkr.hcl
+            PACKER_LOG=1 packer build ./opensuse/sles-15-sp1.json
           no_output_timeout: 30m
 
 workflows:
